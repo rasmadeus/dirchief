@@ -14,14 +14,15 @@ def create_parser():
 def touch(path):
 	try:
 		open(path, "a").close()
+		print("File '{file}' was created".format(file=path))
 	except Exception as ex:
 		print("Couldn't create file because: {ex}".format(ex=ex))
 
 
 def mkdir(path):
-	import os
 	try:
 		os.mkdir(path)
+		print("Dir '{dir}' was created".format(dir=path))
 	except Exception as ex:
 		print("Couldn't create dir because: {ex}".format(ex=ex))
 
